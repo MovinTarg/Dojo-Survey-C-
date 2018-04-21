@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dojo Survey</title>
+        <!-- In this context '~' refers to the wwwroot folder -->
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <form class="survey_form col-md-6" action="/result">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="form-group">
+                <label for='location'>Dojo Location:
+                    <select name='location'>
+                        <option></option>
+                        <option value="seattle">Seattle</option>
+                        <option value="sanfrancisco">San Francisco</option>
+                        <option value="losangeles">Los Angeles</option>
+                        <option value="tulsa">Tulsa</option>
+                        <option value="chicago">Chicago</option>
+                        <option value="houston">Houston</option>
+                        <option value="newyork">New York</option>
+                        <option value="dc">Washington D.C.</option>
+                    </select>
+                </label>
+                </div>
+                <div class="form-group">
+                <label for='language'>Favorite Language:
+                    <select name='language'>
+                        <option></option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="ios">iOS</option>
+                        <option value="Java">Java</option>
+                        <option value="c#">C#</option>
+                    </select>
+                </label>
+                </div>
+                <div class="form-group">
+                    <label>Comment (Optional):</label>
+                    <textarea rows="5" class="form-control" name="comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
